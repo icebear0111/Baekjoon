@@ -4,9 +4,9 @@ B = list(map(int, input().split()))
 S = 0
 
 A.sort()
-B.sort(reverse=True)
 
 for i in range (N):
-    S += A[i] * B[i]
+    S += A[i] * max(B)
+    B.remove(max(B))
 
 print(S)
