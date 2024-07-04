@@ -4,7 +4,6 @@ class Solution {
         int y = denom1 * denom2;
         int gcd, x1, y1;
         
-        gcd = 0;
         x1 = x;
         y1 = y;
         while (y1 != 0) {
