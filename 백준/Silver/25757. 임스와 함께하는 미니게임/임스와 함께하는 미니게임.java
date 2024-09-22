@@ -15,7 +15,7 @@ public class Main {
         HashSet<String> set = new HashSet<>();
         for (int i = 0; i < N; i++) {
             String name = br.readLine();
-            set.add(name);
+            set.add(name); // HashSet은 add 시 자동으로 중복 제거
         }
 
         int answer = 0;
