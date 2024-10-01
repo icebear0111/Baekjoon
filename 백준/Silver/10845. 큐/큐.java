@@ -8,12 +8,14 @@ public class Main {
 
         int N = Integer.parseInt(br.readLine());
         Queue<Integer> queue = new LinkedList<>();
+        int num = 0;
+
         for (int i = 0; i < N; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
             String command = st.nextToken();
 
             if (command.equals("push")) {
-                int num = Integer.parseInt(st.nextToken());
+                num = Integer.parseInt(st.nextToken()); // 마지막으로 추가한 값을 저장
                 queue.offer(num);
             }
             if (command.equals("pop")) {
@@ -48,11 +50,7 @@ public class Main {
                     bw.write("-1\n");
                 }
                 else {
-                    int last = 0;
-                    for (Integer value : queue) {
-                        last = value;
-                    }
-                    bw.write(last + "\n");
+                    bw.write(num + "\n"); // = 마지막으로 push 한 숫지
                 }
             }
         }
