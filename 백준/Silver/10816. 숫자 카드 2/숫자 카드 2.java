@@ -8,19 +8,18 @@ public class Main {
         StringTokenizer st;
 
         int N = Integer.parseInt(br.readLine());
-        ArrayList<Integer> list = new ArrayList<>();
+        int[] arr = new int[N];
         st = new StringTokenizer(br.readLine(), " ");
         for (int i = 0; i < N; i++) {
-            list.add(Integer.parseInt(st.nextToken()));
+            arr[i] = Integer.parseInt(st.nextToken());
         }
 
         HashMap<Integer, Integer> map = new HashMap<>();
-        for (Integer num : list) {
+        for (Integer num : arr) {
             map.put(num, map.getOrDefault(num, 0) + 1);
         }
 
         int M = Integer.parseInt(br.readLine());
-        LinkedHashMap<Integer, Integer> resultMap = new LinkedHashMap<>();
         st = new StringTokenizer(br.readLine(), " ");
         for (int i = 0; i < M; i++) {
             int num = Integer.parseInt(st.nextToken());
