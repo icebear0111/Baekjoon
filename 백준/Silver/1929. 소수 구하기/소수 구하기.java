@@ -8,15 +8,15 @@ public class Main {
         StringTokenizer st = new StringTokenizer(br.readLine());
         int M = Integer.parseInt(st.nextToken());
         int N = Integer.parseInt(st.nextToken());
-        int[] eratosthenes = new int[1000001];
-        for (int i = 2; i < 1000000; i++) {
+        int[] eratosthenes = new int[N + 1];
+        for (int i = 2; i <= N; i++) {
             eratosthenes[i] = i;
         }
 
-        for (int i = 2; i < 1000000; i++) {
+        for (int i = 2; i <= N; i++) {
             if (eratosthenes[i] == 0) continue;
 
-            for (int j = 2 * i; j <= 1000000; j += i) {
+            for (int j = 2 * i; j <= N; j += i) {
                 eratosthenes[j] = 0;
             }
         }
